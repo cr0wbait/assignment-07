@@ -1,85 +1,328 @@
+// kudos to Vince for help with mixins and styling structure
+
 * {
   box-sizing: border-box;
 }
 
-body {
-  font-size: 0;
-  font-family: "Hind", "Futura", "sans-serif"
+a {
+  text-decoration: none;
+  color: #000;
 }
 
 img {
-  max-width: 100%;
-  max-height: 100%;
+  display: block;
+  width: 100%;
+}
+
+body {
+  font-size: 0;
+  margin: 0;
+  background: #F8F8F8;
+}
+
+@mixin background-img($imgUrl){
+  background-image: url($imgUrl);
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  margin: 5px 0;
+}
+
+@mixin desktop_nav {
+  text-align: center;
+  font-size: 15px;
+  margin: 0 auto;
+  padding: 10px 40px 10px;
+  border-top: 1px solid #EEEEEE;
+}
+
+@mixin nav-bar-style {
+  font-size: 15px;
+  color: #fff;
+  padding: 15px 0;
+  letter-spacing: 2px;
+  font-weight: 100;
 }
 
 #app-container {
   font-size: medium;
-  position: relative;
-  height: 100vh;
+  font-family:"Hind", "Futura", "sans-serif";
 }
 
-.restops {
-  display: inline;
+.colstack {
+  font-size: 0;
+}
+
+.colstack > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: medium;
+}
+
+/* NAV BAR 1 */
+
+.mobile_nav {
   position: fixed;
   top: 0;
+  left: 0;
+  background: #F8F8F8;
   width: 100%;
-  height: 50px;
-  background-color: #ddd;
-  border-bottom: 1px solid #aaa;
-  padding: 5px;
+  margin:0;
 }
 
-.op {
-  border: 1px solid #aaa;
+.mobile_nav > * {
+  border: 1px solid #ddd;
 }
 
-.fullog {
+.mnav_logo {
+  width: 20%;
+  padding: 7px 15px 6px;
+}
+
+.mobile_logo {
+  max-width: 50px;
+  margin: 0 auto;
+}
+
+.mnav_rest,
+.mnav_vent {
+  width: 30%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.mnav_bars {
+  width: 20%;
+  text-align: center;
+  padding: 15px;
+}
+
+.desktop_nav {
+  display:none;
+}
+
+.desktop_subnav {
   display: none;
 }
 
-.restlist {
-  background-color: black;
-  height: 100px;
+.mobile_subnav {
+  width: 100%;
+  background: #030404;
+  padding-top: 52px;
+  margin: 0 auto;
 }
 
-.tiles {
+
+.nosrest {
+  width: 80%;
+  color: #FFF;
+  padding: 3px;
+  border-right: 1px solid #CCC;
+}
+
+.nav_tab {
+  width: 20%;
+  text-align: center;
+}
+
+.nav_tab i {
+  color: #fff;
+  font-size: 57px;
+  font-weight: 200;
+  padding-top: 3px;
+}
+
+// body
+
+.rest_tile {
+  width: 100%;
+  padding: 10% 0;
+
 
 }
 
-.stack {
-
+.rest_tile > * {
+  text-align: center;
+  color: #F7F7F7;
+  letter-spacing: 1.5px;
+  text-shadow: 2px 2px 4px #000000;
 }
 
-.tile {
-
+.tile_title {
+  font-size: 12px;
+  margin-top: 0;
 }
 
-// @media screen and (min-width: 1000px){
-//   .restops {
-//     position: fixed;
-//     left: 0;
-//     height: 100%;
-//     width: 15%;
-//   }
-// .fullog {
-// display: auto;
-// }
-//  .moblog {
-// display: none;
-// }
-//   .restlist {
-//     position: fixed;
-//     top: 0;
-//     right: 0;
-//     height: 50px;
-//     width: 85%;
-//
-//   }
-//   .tiles {
-//
-//   }
-//   .stack {
-//     width: 80%;
-//   }
-//
-// }
+.rest_name {
+  margin-bottom: 0;
+  padding-top: 10%;
+}
+
+.tilesquiggle {
+  display: block;
+  margin: 0 auto 20%;
+  width: 10%;
+}
+
+.ny_noodle {
+  @include background-img('../images/momofuko-01-noodlebarbowl_mini.jpg');
+}
+
+.ssamba {
+  @include background-img('../images/momofuko-02-ssam-bar.jpg');
+}
+
+.ko {
+   @include background-img('../images/momofuko-03-ko.png');
+ }
+
+.mypeach {
+   @include background-img('../images/momofuko-04-ma-peche.jpg');
+ }
+
+.nishi {
+   @include background-img('../images/momofuko-05-nishi.jpg');
+ }
+
+.ccdc {
+   @include background-img('../images/momofuko-06-CCDC.jpg');
+ }
+
+.nicky {
+   @include background-img('../images/momofuko-09-nikai.jpg');
+ }
+
+.swords {
+   @include background-img('../images/momofuko-07-daisho.png');
+ }
+
+.short {
+   @include background-img('../images/momofuko-08-shoto.png');
+ }
+
+.droog {
+   @include background-img('../images/momofuko-milkbar-10.jpg');
+ }
+
+
+@media screen and (min-width:678px) {
+
+// DESKTOP NAV BAR
+
+.mobile_nav {
+  display: none;
+}
+
+.desktop_nav {
+  display: block;
+  position: fixed;
+  top: 0; left: 0;
+  width: 200px;
+  height: 100%;
+  background: #F9F9F9;
+  border: 2px solid #D9D8D8;
+  z-index: 2;
+}
+
+.desktop_nav > * {
+  width: 100%;
+}
+
+.desktop_nav img {
+  width: 60px;
+  margin: 0 auto;
+  padding: 20px 0 10px;
+}
+
+
+.dnav_logo .desktop_logo {
+  width:100%;
+  margin:0 auto;
+  padding: 10px 10px 80px 10px;
+}
+
+.dnav_rest {
+  @include desktop_nav;
+}
+
+.dnav_comp {
+  @include desktop_nav;
+}
+
+.dnav_vent {
+  @include desktop_nav;
+}
+
+.dnav_socl {
+  @include desktop_nav;
+  padding-top: 60px;
+  padding-bottom: 10px;
+
+    .social-icons {
+      width: 100%;
+    }
+
+    .social {
+      margin: 0 6px;
+      width: 25%;
+    }
+
+    img {
+      padding: 0;
+    }
+    i {
+      font-size: 21px;
+    }
+    p {
+      padding-top: none;
+    }
+}
+
+.mobile_subnav {
+  display: none;
+}
+
+.desktop_subnav {
+    display: block;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    background: #030404;
+    margin: 0 auto;
+    z-index: 1;
+    padding-left: 200px;
+}
+
+
+.nuesrest {
+  width: 50%;
+  text-align: left;
+  @include nav-bar-style;
+  padding-left: 15px;
+}
+
+.rest_list {
+  width: 50%;
+  text-align: right;
+  padding-left: 0;
+}
+
+.deskrest {
+  width: 49.5%;
+  @include nav-bar-style;
+  padding-right: 15px;
+}
+
+.main_content {
+  width: 95%;
+  margin: 0 auto;
+  padding-left: 200px;
+  padding-top: 50px;
+}
+
+.rest_tile {
+  width: 50%;
+}
+
+}

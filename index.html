@@ -2,53 +2,156 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Momofuko: Trendu Nippon</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Hind:600" rel="stylesheet">
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
   <link href="./css/styles.css" rel="stylesheet">
 </head>
+
+<!-- kudos to Vince for the assist with structuring and formatting -->
+
 <body>
   <div id='app-container'>
-    <div class='restops container'>
-      <div class='row'>
-        <div class='op logo col-xs-2 col-lg-3'>
-          <img class='moblog' src='images/logo-mobile.png'>
-          <img class='fullog' src='images/logo-fullsize.svg'>
+    <nav class='mobile_nav colstack'>
+      <div class='mnav_logo'>
+        <img src='./images/logo-mobile.png' class='mobile_logo'>
+      </div>
+      <div class='mnav_rest'>
+        <a href='#'>Restaurants</a>
+      </div>
+      <div class='mnav_vent'>
+        <a href='#'>Ventures</a>
+      </div>
+      <div class='mnav_bars'>
+        <i class='fa fa-bars' aria-hidden='true'>
+      </div>
+    </nav>
+    <nav class='desktop_nav colstack'>
+      <div class='dnav_logo'>
+        <img src='./images/logo-fullsize.svg' class='desktop_logo'>
+      </div>
+      <div class='dnav_rest'>
+        <a href='#'><img src='./images/navicon-bowl.svg'>our restaurants</a>
+      </div>
+      <div class='dnav_comp'>
+        <a href='#'><img src='./images/navicon-our-company.svg'>our company</a>
+      </div>
+      <div class='dnav_vent'>
+        <a href='#'><img src='./images/navicon-box.svg'>other ventures</a>
+      </div>
+      <div class='dnav_socl'>
+        <div class='socl_icons colstack'>
+          <span class='social'>
+            <i class='fa fa-twitter' aria-hidden='true'></i>
+          </span>
+          <span class='social'>
+            <i class='fa fa-facebook' aria-hidden='true'></i>
+          </span>
+          <span class='social'>
+            <i class='fa fa-instagram' aria-hidden='true'></i>
+          </span>
+          <span class='social'>
+            <i class='fa fa-tumblr' aria-hidden='true'></i>
+          </span>
         </div>
-        <div class='op restaurants col-xs-4 col-lg-2'>
-          <h2>Restaurants</h2>
+        <img src='./images/wavy-low-line-black.png' class='desktop_squiggle'>
+        <p class='social_stack colstack'>
+          <i class='fa fa-clock-o' aria-hidden='true'></i> reservations
+        </p>
+      </div>
+    </nav>
+
+    <div class='mobile_subnav colstack'>
+      <div class='nosrest'>
+        <p>Our Restaurants</p>
+      </div>
+      <span class='nav_tab'>
+        <a href='#'><i class='fa fa-angle-down' aria-hidden='true'></i>
+      </span>
+    </div>
+    <div class='desktop_subnav colstack'>
+      <a href='#' class='nuesrest'>Our Restaurants</a>
+      <div class='rest_list colstack'>
+        <a href='#' class='deskrest'>By Concept</a>
+        <a href='#' class='deskrest'>By Location</a>
+      </div>
+    </div>
+
+    <div class='main_content colstack'>
+      <div class='rest_tile ny_noodle'>
+        <h4 class='tile_title'>Restaurant</h4>
+        <h1 class='rest_name'>Noodle Bar NY</h1>
+        <div class='tilesquiggle'>
+          <img src='./images/wavy-low-line-white.png'>
         </div>
-        <div class='op company col-lg-2'>
+      </div>
+      <div class='rest_tile ssamba'>
+        <h4 class='tile_title'>Restaurant</h4>
+        <h1 class='rest_name'>Ss&auml;m Bar</h1>
+        <div class='tilesquiggle'>
+          <img src='./images/wavy-low-line-white.png'>
         </div>
-        <div class='op ventures col-xs-4 col-lg-2'>
-          <h2>Ventures</h2>
+      </div>
+      <div class='rest_tile ko'>
+        <h4 class='tile_title'>Restaurant</h4>
+        <h1 class='rest_name'>Ko</h1>
+        <div class='tilesquiggle'>
+          <img src='./images/wavy-low-line-white.png'>
         </div>
-        <div class='op misc col-xs-2 col-lg-3'>
-          <i class="fa fa-bars" aria-hidden="true"></i>
+      </div>
+      <div class='rest_tile mypeach'>
+        <h4 class='tile_title'>Restaurant</h4>
+        <h1 class='rest_name'>M&aacute; P&ecirc;che</h1>
+        <div class='tilesquiggle'>
+          <img src='./images/wavy-low-line-white.png'>
+        </div>
+      </div>
+      <div class='rest_tile nishi'>
+        <h4 class='tile_title'></h4>
+        <h1 class='rest_name'>Nishi</h1>
+        <div class='tilesquiggle'>
+          <img src='./images/wavy-low-line-white.png'>
+        </div>
+      </div>
+      <div class='rest_tile ccdc'>
+        <h4 class='tile_title'></h4>
+        <h1 class='rest_name'>CCDC</h1>
+        <div class='tilesquiggle'>
+          <img src='./images/wavy-low-line-white.png'>
+        </div>
+      </div>
+      <div class='rest_tile nicky'>
+        <h4 class='tile_title'>Bar</h4>
+        <h1 class='rest_name'>Nikai</h1>
+        <div class='tilesquiggle'>
+          <img src='./images/wavy-low-line-white.png'>
+        </div>
+      </div>
+      <div class='rest_tile swords'>
+        <h4 class='tile_title'>Restaurant</h4>
+        <h1 class='rest_name'>Daish&ouml;</h1>
+        <div class='tilesquiggle'>
+          <img src='./images/wavy-low-line-white.png'>
+        </div>
+      </div>
+      <div class='rest_tile short'>
+        <h4 class='tile_title'>Restaurant</h4>
+        <h1 class='rest_name'>Sh&ouml;t&ouml;</h1>
+        <div class='tilesquiggle'>
+          <img src='./images/wavy-low-line-white.png'>
+        </div>
+      </div>
+      <div class='rest_tile droog'>
+        <h4 class='tile_title'></h4>
+        <h1 class='rest_name'>Milk Bar</h1>
+        <div class='tilesquiggle'>
+          <img src='./images/wavy-low-line-white.png'>
         </div>
       </div>
     </div>
-    <div class='restlist container'>
-      <div class='row'>
-        <div class='listi col-xs-8'></div>
-        <div class='listi col-xs-2'></div>
-        <div class='listi col-xs-2'></div>
-      </div>
-    </div>
-    <div class='tiles container'>
-      <div class='row stack'>
-        <div class='tile col-lg-6'></div>
-        <div class='tile col-lg-6'></div>
-        <div class='tile col-lg-6'></div>
-        <div class='tile col-lg-6'></div>
-        <div class='tile col-lg-6'></div>
-        <div class='tile col-lg-6'></div>
-        <div class='tile col-lg-6'></div>
-        <div class='tile col-lg-6'></div>
-      </div>
-    </div>
+
   </div>
 </body>
 </html>

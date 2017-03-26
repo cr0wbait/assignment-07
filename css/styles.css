@@ -5,8 +5,41 @@ body {
   font-size: 0;
   font-family: "Hind", "Futura", "sans-serif"; }
 
-#midgard {
+#app-container {
   font-size: medium;
-  position: relative; }
+  position: relative;
+  height: 100vh; }
+
+.restops {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #ddd;
+  border-bottom: 1px solid #aaa; }
+
+.op {
+  border: 1px solid #aaa; }
+
+.restlist {
+  background-color: black;
+  height: 100px; }
+
+@media screen and (min-width: 1000px) {
+  .restops {
+    position: fixed;
+    left: 0;
+    height: 100%;
+    width: 15%; }
+
+  .restlist {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 50px;
+    width: 85%; }
+
+  .stack {
+    width: 80%; } }
 
 /*# sourceMappingURL=styles.css.map */
